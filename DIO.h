@@ -15,3 +15,5 @@
 void DIO_Init(int8 Port,int8 pin, int8 dir);
 void DIO_WritePin(int8 Port,int8 Pin,int8 Data);
 void DIO_Write_Port(int8 Port, int8 Data);
+int8 DIO_ReadPin(int8 Port,int8 pin);
+int8 DIO_ReadPort(int8 Port);
