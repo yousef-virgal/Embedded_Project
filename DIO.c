@@ -292,6 +292,7 @@ int8 DIO_ReadPin(int8 Port, int8 Pin)
         read_pin = Get_Bit(GPIO_PORTF_DATA_R, Pin);
         break;
     }
+    return read_pin;
 }
 
 int8 DIO_ReadPort(int8 Port)
