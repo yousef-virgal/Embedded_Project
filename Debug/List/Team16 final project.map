@@ -1,0 +1,223 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  07/Jan/2022  07:30:55
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Exe\Team16 final project.out
+#    Map file     =
+#        D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\List\Team16 final project.map
+#    Command line =
+#        -f "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Exe\Team16 final
+#        project.out.rsp" ("D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Obj\DIO.o"
+#        "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Obj\main.o"
+#        "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Obj\MyTimer.o"
+#        "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Obj\startup_ewarm.o"
+#        "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Obj\systick.o"
+#        --no_out_extension -o "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\Exe\Team16 final project.out"
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map "D:\UNI\senior1\CSE211 Introduction to embedded
+#        systems\project\Embedded_Project\Debug\List\Team16 final project.map"
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+do not initialize { rw section .noinit };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                    0x26c
+  .intvec          const            0x0  0x26c  startup_ewarm.o [1]
+                                - 0x26c  0x26c
+
+"P1":                                    0xd70
+  .text            ro code        0x26c  0x5dc  DIO.o [1]
+  .text            ro code        0x848  0x444  MyTimer.o [1]
+  .text            ro code        0xc8c  0x238  main.o [1]
+  .text            ro code        0xec4   0x38  zero_init3.o [4]
+  .text            ro code        0xefc   0x28  data_init.o [4]
+  .text            ro code        0xf24   0x22  fpinit_M.o [3]
+  .iar.init_table  const          0xf48   0x10  - Linker created -
+  .text            ro code        0xf58   0x1e  startup_ewarm.o [1]
+  .text            ro code        0xf78   0x1c  cstartup_M.o [4]
+  .text            ro code        0xf94   0x1e  cmain.o [4]
+  .text            ro code        0xfb2    0x4  low_level_init.o [2]
+  .text            ro code        0xfb6    0x4  exit.o [2]
+  .text            ro code        0xfbc    0xa  cexit.o [4]
+  .text            ro code        0xfc8   0x14  exit.o [5]
+  .rodata          const          0xfdc    0x0  zero_init3.o [4]
+                                - 0xfdc  0xd70
+
+"P2", part 1 of 2:                         0x4
+  .bss             zero     0x2000'0000    0x1  main.o [1]
+  .bss             zero     0x2000'0001    0x1  main.o [1]
+                          - 0x2000'0002    0x2
+
+"P2", part 2 of 2:                       0x200
+  .noinit          uninit   0x2000'0004  0x200  startup_ewarm.o [1]
+                          - 0x2000'0204  0x200
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0xfdc     0x3'ffff  0x3'f024
+  0x2000'0204  0x2000'7fff    0x7dfc
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x2:
+          0x2000'0000   0x2
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\Debug\Obj: [1]
+    DIO.o               1'500
+    MyTimer.o           1'092
+    main.o                568                 2
+    startup_ewarm.o        30      620      512
+    -------------------------------------------
+    Total:              3'190      620      514
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [3]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [4]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           28
+    data_init.o            40
+    zero_init3.o           56
+    -------------------------------------------
+    Total:                164
+
+shb_l.a: [5]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    6        2
+    Linker created                  16
+-----------------------------------------------
+    Grand Total:        3'422      638      514
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0xf48          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xf58          --   Gb  - Linker created -
+?main                         0xf95         Code  Gb  cmain.o [4]
+DIO_Init                      0x26d  0x3de  Code  Gb  DIO.o [1]
+DIO_WritePin                  0x64b  0x14a  Code  Gb  DIO.o [1]
+FaultISR                      0xf73    0x2  Code  Lc  startup_ewarm.o [1]
+IntDefaultHandler             0xf75    0x2  Code  Lc  startup_ewarm.o [1]
+NmiSR                         0xf71    0x2  Code  Lc  startup_ewarm.o [1]
+Pedestrian_Button_Handler
+                              0xea9   0x1c  Code  Gb  main.o [1]
+Pedestrian_Timer_IntHandler
+                              0xd63    0x2  Code  Gb  main.o [1]
+Region$$Table$$Base           0xf48          --   Gb  - Linker created -
+Region$$Table$$Limit          0xf58          --   Gb  - Linker created -
+ResetISR                      0xf59   0x14  Code  Gb  startup_ewarm.o [1]
+Timer_Init                    0x849  0x1e2  Code  Gb  MyTimer.o [1]
+Timer_Resume                  0xb8f   0x6c  Code  Gb  MyTimer.o [1]
+Timer_Set                     0xa2b   0xd4  Code  Gb  MyTimer.o [1]
+Timer_Stop                    0xaff   0x90  Code  Gb  MyTimer.o [1]
+Traffic_Timer_IntHandler
+                              0xd65  0x134  Code  Gb  main.o [1]
+__cmain                       0xf95         Code  Gb  cmain.o [4]
+__exit                        0xfc9   0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0xefd   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0xf25         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0xf79         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3              0xec5   0x38  Code  Gb  zero_init3.o [4]
+__low_level_init              0xfb3    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main                    0xfa1         Code  Gb  cmain.o [4]
+_exit                         0xfbd         Code  Gb  cexit.o [4]
+direction               0x2000'0001    0x1  Data  Lc  main.o [1]
+exit                          0xfb7    0x4  Code  Gb  exit.o [2]
+main                          0xc8d   0xd6  Code  Gb  main.o [1]
+pui32Stack              0x2000'0004  0x200  Data  Lc  startup_ewarm.o [1]
+stateoftraffic          0x2000'0000    0x1  Data  Lc  main.o [1]
+
+
+[1] = D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  3'422 bytes of readonly  code memory
+    638 bytes of readonly  data memory
+    514 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

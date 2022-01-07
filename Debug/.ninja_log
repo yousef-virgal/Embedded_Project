@@ -1,0 +1,16 @@
+# ninja log v5
+70	310	6632334328728159	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/startup_ewarm.o	6152bc1e72fbb536
+3	406	6632334329964842	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
+265	470	6632334330603108	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/systick.o	18266028b03a29ca
+36	419	6632335750405841	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/MyTimer.o	e9a22e21433ebaf9
+58	431	6632335750385899	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/systick.o	18266028b03a29ca
+3	440	6632335750465684	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
+2	231	6632337791499975	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
+17	364	6632364395166423	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/MyTimer.o	e9a22e21433ebaf9
+2	402	6632364395495808	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
+50	250	6632365549552289	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/systick.o	c5c7d999cb49da3f
+10	281	6632365549692886	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/MyTimer.o	4576dca73273a2f7
+27	297	6632365550105311	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	74b65fd10684393
+228	428	6632365551566843	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/startup_ewarm.o	6a2d9e0fcefa184b
+2	256	6632366559116915	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/main.o	a22bed61735a6571
+262	339	6632366559949214	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Exe/Team16 final project.out	37c4092e162d5fb7
