@@ -1,127 +1,58 @@
 #include "DIO.h"
-void delay(int32 counter);
+#include "stdio.h"
+#include "Timer.h"
+//#include "systick.h"
+//trafic1,2 green w yellow w red 
+
+enum traffic {red, yellow ,green};
+
+enum direction {northsouth,eastwest}//kfaya habd!!!!!!!!!  
+
+
 int main()
 {
-  DIO_Init(PORTF,0,IN_DIR);
-  DIO_Init(PORTF,1,OUT_DIR);
-  DIO_Init(PORTF,2,OUT_DIR);
-  DIO_Init(PORTF,3,OUT_DIR);
-  DIO_Init(PORTF,4,IN_DIR);
-//  
-//  enum states {white = 0, red = 1,green = 2,blue = 3};
-//  enum states state = white;
-//  DIO_WritePin(PORTF,1,One);
-//  DIO_WritePin(PORTF,2,One);
-//  DIO_WritePin(PORTF,3,One);
-//  while(1){
-//    switch(state){
-//    case white:
-//      if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        state = red;
-//        DIO_WritePin(PORTF,2,Zero);
-//        DIO_WritePin(PORTF,3,Zero);
-//        }
-//        
-//      }
-//      else if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        state = blue;
-//        DIO_WritePin(PORTF,1,Zero);
-//        DIO_WritePin(PORTF,3,Zero);
-//        }
-//      }
-//      break;
-//      
-//    case red:
-//      if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        state = green;
-//        DIO_WritePin(PORTF,3,One);
-//        DIO_WritePin(PORTF,1,Zero);
-//        }
-//      }
-//      else if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        state = white;
-//        DIO_WritePin(PORTF,3,One);
-//        DIO_WritePin(PORTF,2,One);
-//        }
-//      }
-//      break;
-//    case green:
-//      
-//      if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        state = blue;
-//        DIO_WritePin(PORTF,3,Zero);
-//        DIO_WritePin(PORTF,2,One);
-//        }
-//      }
-//      else if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        state = red;
-//        DIO_WritePin(PORTF,3,Zero);
-//        DIO_WritePin(PORTF,1,One);
-//        }
-//      }
-//      break;
-//    case blue:
-//      if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,0) & 0x01){
-//        state = white;
-//        DIO_WritePin(PORTF,1,One);
-//        DIO_WritePin(PORTF,3,One);
-//        }
-//      }
-//      else if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        delay(1000000);
-//        if(~DIO_ReadPin(PORTF,4) & 0x01){
-//        state = green;
-//        DIO_WritePin(PORTF,2,Zero);
-//        DIO_WritePin(PORTF,3,One);
-//        }
-//      }
-//      break;
-//    }
-//  }
-  
-  while(1){
-    
-    if((~DIO_ReadPin(PORTF,0) & 0x01) && (~DIO_ReadPin(PORTF,4) & 0x01)){
-      
-      if((~DIO_ReadPin(PORTF,0) & 0x01) && (~DIO_ReadPin(PORTF,4) & 0x01)){
-      DIO_Write_Port(PORTF,Zero);
-      DIO_WritePin(PORTF,3,One);
-      }
-    }
-    else if(~DIO_ReadPin(PORTF,0) & 0x01){
-      delay(3000);
-      if(~DIO_ReadPin(PORTF,0) & 0x01){
-      DIO_Write_Port(PORTF,Zero);
-      DIO_WritePin(PORTF,1,One);
-      }
-    }
-    else if(~DIO_ReadPin(PORTF,4) & 0x01){
-      delay(3000);
-      if(~DIO_ReadPin(PORTF,4) & 0x01){
-      DIO_Write_Port(PORTF,Zero);
-      DIO_WritePin(PORTF,2,One);
-      }
-    }
-    else{
-    DIO_Write_Port(PORTF,Zero);
-    }
-  }
+__asm(" CPSIE I");
+static enum currenttrafficstate  stateoftraffic = traffic1;
+static enum direction trafficstate = northsouth;
+
+while(1){
+  __asm(" wfi \n");
 }
-void delay(int32 counter){
-  for(int i =0 ;i<counter/4;i++){
-  }
+
+}
+
+
+void Pedestrian_Timer_IntHandler(void)
+{
+ if (trafficstate == northsouth){
+   if stateoftraffic  == green:
+    led== green
+   if stateoftraffic  == yellow:
+   led2 == red   
+
+ }
+  
+ else east wset
+}
+
+void Traffic_Timer_IntHandler(void){
+//clear interrupt
+//stop timer 
+switch(currentstate):
+case grren:
+  led yellow
+case:
+  led
+case: 
+case green_red:
+set timer 
+colors 
+
+//start timer
+}
+void Pedestrian_Button_Handler(void)
+{
+  // timers traffic
+  // change leds
+  // start timer
 }

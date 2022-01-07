@@ -1,5 +1,14 @@
-C:\Users\Yousef\OneDrive\Desktop\Embeded_Systems\test\Embedded_Project\Debug\BrowseInfo\main.pbi: \
-  C:\Users\Yousef\OneDrive\Desktop\Embeded_Systems\test\Embedded_Project\types.h \
-  C:\Users\Yousef\OneDrive\Desktop\Embeded_Systems\test\Embedded_Project\bitwise_operations.h \
-  C:\Users\Yousef\OneDrive\Desktop\Embeded_Systems\test\Embedded_Project\DIO.h \
-  C:\Users\Yousef\OneDrive\Desktop\Embeded_Systems\test\Embedded_Project\main.c
+D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\Debug\BrowseInfo\main.pbi: \
+  D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\Timer.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdio.h \
+  D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\tm4c123gh6pm.h \
+  D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\bitwise_operations.h \
+  D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\types.h \
+  D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\DIO.h \
+  D:\UNI\senior1\CSE211\ Introduction\ to\ embedded\ systems\Group\ project\ team\ 16\main.c

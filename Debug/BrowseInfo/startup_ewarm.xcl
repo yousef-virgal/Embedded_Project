@@ -1,13 +1,13 @@
-"D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\DIO.C"
+"D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\startup_ewarm.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Debug\BrowseInfo\DIO.pbi.dep
+D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Debug\BrowseInfo\startup_ewarm.pbi.dep
 -o
-D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Debug\BrowseInfo\DIO.pbi
+D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Debug\BrowseInfo\startup_ewarm.pbi
 -I
 D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16
 -I

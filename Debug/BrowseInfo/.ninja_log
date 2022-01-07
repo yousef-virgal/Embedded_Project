@@ -1,88 +1,18 @@
 # ninja log v5
-1	196	6576694600000000	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/Task4/Debug/BrowseInfo/main.xcl	49bb3e1f940f9135
-9	181	6576694600000000	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/Task4/Debug/BrowseInfo/DIO.xcl	b8528e426b113af1
-0	54	6576718687459830	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/Task4/Debug/BrowseInfo/main.pbi	c4b3247a95c04724
-119	1142	6576718697926672	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/Task4/Debug/BrowseInfo/Task4.pbw	c2095123d9143016
-1	135	6582216243009467	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/DIO.pbi	ef701f20aacbd494
-61	111	6576718688038407	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/Task4/Debug/BrowseInfo/Task4.pbd	78159819742dcbb5
-191	336	6576694606758324	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/Task4/Debug/BrowseInfo/DIO.pbi	b0196e3b0a732d7
-13	724	6582142620000000	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.xcl	badc63256ff61b32
-46	761	6582142620000000	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/DIO.xcl	277d726824044185
-1	79	6582226814138003	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-1	70	6582226917245127	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-80	1978	6582226935685888	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	74	6582227495559386	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-86	148	6582227496287439	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-165	1691	6582227511100583	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	64	6582229033507155	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-71	126	6582229034125469	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-137	1988	6582229052113345	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-0	48	6582230117909482	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-54	98	6582230118418112	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-107	1232	6582230129344257	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	132	6582230182076097	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/DIO.pbi	ef701f20aacbd494
-145	207	6582230182824103	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-221	1463	6582230194926107	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	197	6582325128542804	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-235	389	6582325130510770	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-399	2645	6582325152137579	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	163	6582350733405989	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-173	221	6582350733960145	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-2	1793	6582350808292900	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	66	6582352821293493	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-76	127	6582352821926305	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-3	2502	6582352922283451	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-4	196	6582355677829061	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-212	261	6582355678538217	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-271	2442	6582355699724369	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	179	6582358812826319	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-211	404	6582358815064874	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-429	3558	6582358845002559	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	160	6582361377485416	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-180	279	6582361378753528	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-290	2534	6582361400361802	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	97	6582362231485252	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-104	152	6582362232129581	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-159	2161	6582362251440750	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	99	6582363026104175	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-109	158	6582363026734576	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-171	2159	6582363045924221	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	157	6582363359210856	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-178	234	6582363360014559	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-245	1677	6582363373851425	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	137	6582364204061631	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-146	236	6582364205033309	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-0	2058	6582364278108263	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	201	6582364850752319	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-225	283	6582364851635646	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-298	2262	6582364870348999	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	164	6582365288373425	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-203	388	6582365290625743	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-403	2527	6582365311161771	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	67	6582366193686566	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-75	132	6582366194338569	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-142	2447	6582366216275934	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	59	6582366427349341	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-69	123	6582366427989864	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-2	1904	6582366500999537	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	165	6582367127130913	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-190	361	6582367129103473	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-368	1749	6582367142024620	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-1	82	6582368126398694	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-93	151	6582368127102037	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-163	1773	6582368142590952	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-2	156	6582369031881138	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-172	268	6582369032944992	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-1	1693	6582369163333383	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	301	6582369840344048	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-1	72	6582369893757681	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-81	2277	6582369915106168	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	194	6582371057081528	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-221	327	6582371058516529	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-1	2097	6582371138989042	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	213	6582371401944477	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-247	450	6582371404343931	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-3	1826	6582371487647209	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
-3	156	6582372467097686	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/main.pbi	b0cbb2617fe42262
-189	346	6582372468959821	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbd	a5680a753606b63b
-387	2457	6582372489408125	C:/Users/Yousef/OneDrive/Desktop/Embeded_Systems/test/Embedded_Project/Debug/BrowseInfo/Task4.pbw	69f0a1591f8883aa
+1	309	6632231870000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/main.xcl	b184e4f2f5467580
+319	387	6632231875056804	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/main.pbi	16acc2afe751f4a5
+394	422	6632231875428352	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbd	c630f874c7263766
+429	1094	6632231881724183	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbw	697bc6d691cbc979
+2	320	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/DIO.xcl	4bdf2ac147c28879
+102	333	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/startup_ewarm.xcl	19b5720cd7833edb
+128	353	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Timer.xcl	1269d372b575099d
+153	374	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/systick.xcl	fc6ce8200c6109d6
+349	465	6632232430938194	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/startup_ewarm.pbi	bda582a3cde470c8
+329	544	6632232431636335	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/DIO.pbi	440c6602b1eff58e
+369	564	6632232431696185	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Timer.pbi	f25084a1f7ba8811
+393	610	6632232432394580	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/systick.pbi	5bd2b3db9051f5c3
+558	660	6632232432922902	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part0.pbi	10e821874da64ebe
+579	668	6632232432972781	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part2.pbi	c31a1cd947eb27cc
+620	740	6632232433631324	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part1.pbi	617aadf3144ba4a4
+750	923	6632232435565837	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbd	4719231c5f506b6
+934	2418	6632232449931318	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbw	697bc6d691cbc979
