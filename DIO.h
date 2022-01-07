@@ -21,8 +21,5 @@ void DIO_WritePin(int8 port,int8 pin, int8 data);
 void DIO_WritePort(int8 port, int8 data);
 int8 DIO_ReadPin(int8 port,int8 pin);
 int8 DIO_ReadPort(int8 port);
-void Keypad_Init();
-int8 Keypad_Read();
-void delay(int time);
 void DIO_TogglePin(int8 Port, int8 Pin);
 #endif

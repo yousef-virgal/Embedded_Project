@@ -1,18 +1,34 @@
 # ninja log v5
+510	686	6632365603991067	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project_part1.pbi	f5fe92f20ee67187
 1	309	6632231870000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/main.xcl	b184e4f2f5467580
 319	387	6632231875056804	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/main.pbi	16acc2afe751f4a5
-394	422	6632231875428352	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbd	c630f874c7263766
-429	1094	6632231881724183	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbw	697bc6d691cbc979
-2	320	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/DIO.xcl	4bdf2ac147c28879
-102	333	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/startup_ewarm.xcl	19b5720cd7833edb
-128	353	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Timer.xcl	1269d372b575099d
 153	374	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/systick.xcl	fc6ce8200c6109d6
+750	923	6632232435565837	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbd	4719231c5f506b6
+934	2418	6632232449931318	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbw	697bc6d691cbc979
+579	668	6632232432972781	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part2.pbi	c31a1cd947eb27cc
+102	333	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/startup_ewarm.xcl	19b5720cd7833edb
+2	320	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/DIO.xcl	4bdf2ac147c28879
+128	353	6632232420000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Timer.xcl	1269d372b575099d
 349	465	6632232430938194	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/startup_ewarm.pbi	bda582a3cde470c8
+387	505	6632365602389530	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/startup_ewarm.pbi	57aaf68184dd1ba6
 329	544	6632232431636335	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/DIO.pbi	440c6602b1eff58e
 369	564	6632232431696185	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Timer.pbi	f25084a1f7ba8811
 393	610	6632232432394580	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/systick.pbi	5bd2b3db9051f5c3
+9	229	6632365590000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/MyTimer.xcl	117961ef5a49a548
 558	660	6632232432922902	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part0.pbi	10e821874da64ebe
-579	668	6632232432972781	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part2.pbi	c31a1cd947eb27cc
+219	346	6632366461553869	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project.pbd	a74389b8bbf2c405
 620	740	6632232433631324	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project_part1.pbi	617aadf3144ba4a4
-750	923	6632232435565837	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbd	4719231c5f506b6
-934	2418	6632232449931318	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Debug/BrowseInfo/Team16 final project.pbw	697bc6d691cbc979
+35	276	6632365590000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/DIO.xcl	3c87a9107759461f
+2	218	6632365590000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/main.xcl	d6118793b9d739cd
+244	380	6632365600000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/startup_ewarm.xcl	5b4dcf1edecf505e
+66	249	6632365590000000	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/systick.xcl	358d2215adf35d8e
+272	453	6632365601865233	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/MyTimer.pbi	2dfc78374efede65
+293	482	6632365602144352	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/DIO.pbi	2003a0b8d6a96ffc
+3	206	6632366576905734	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/main.pbi	929ab76fc15930f8
+400	660	6632365603931216	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/systick.pbi	b65f953e2dc55d4
+353	1539	6632366473037688	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project.pbw	59cccd97022c5dbc
+665	736	6632365604619718	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project_part2.pbi	83a51b451f73a912
+126	213	6632366460224009	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project_part0.pbi	ed15e612f6c5b674
+2	86	6632366629320647	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project_part0.pbi	ed15e612f6c5b674
+117	231	6632366630761670	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project.pbd	a74389b8bbf2c405
+239	1431	6632366642332276	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/BrowseInfo/Team16 final project.pbw	59cccd97022c5dbc

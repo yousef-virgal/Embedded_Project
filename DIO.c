@@ -1,58 +1,5 @@
 #include "DIO.h"
 #include "stdint.h"
-void Keypad_Init()
-{
-    for (int i = 0; i < 4; i++)
-    {
-        DIO_Init(PORTB, i, OUT_DIR);
-        DIO_Init(PORTD, i, IN_DIR);
-    }
-}
-int8 Keypad_Read()
-{
-    int8 values[4][4] = {{'1', '2', '3', '+'},
-                       {'4', '5', '6', '-'},
-                       {'7', '8', '9', '/'},
-                       {'*', '0', '#', '='}};
-    for (int i = 0; i < 4; i++)
-    {
-        DIO_WritePin(PORTB, i, 0);
-    }
-    int8 column;
-    if (DIO_ReadPort(PORTD) == 0xf)
-    {
-        return 'U';
-    }
-    else
-    {
-        for (column = 0; column <4; column++)
-        {
-          if (DIO_ReadPin(PORTD, column) == 0){
-            delay(200);
-            if (DIO_ReadPin(PORTD, column) == 0)
-               break;
-          }
-             
-        }
-    }
-    int row;
-    for (row = 0; row < 4; row++)
-    {
-        DIO_WritePort(PORTB, 1);
-        DIO_WritePin(PORTB, row,0);
-        if (DIO_ReadPin(PORTD, column) == 0)
-        {
-            delay(200);
-            if (DIO_ReadPin(PORTD, column) == 0)
-            {
-                break;
-            }
-            //  else return 'U';
-        }
-    }
-
-    return values[row][column];
-}
 void DIO_Init(int8 port, int8 pin, int8 dir)
 {
 

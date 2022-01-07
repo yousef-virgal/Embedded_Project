@@ -2852,6 +2852,12 @@
         <name>$PROJ_DIR$\main.c</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\MyTimer.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\MyTimer.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\startup_ewarm.c</name>
     </file>
     <file>
@@ -2859,12 +2865,6 @@
     </file>
     <file>
         <name>$PROJ_DIR$\systick.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\Timer.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\Timer.h</name>
     </file>
     <file>
         <name>$PROJ_DIR$\tm4c123gh6pm.h</name>

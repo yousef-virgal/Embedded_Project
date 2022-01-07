@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\settings\Team16 final project.Debug.general.xcl" --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\settings\Team16 final project.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.general.xcl" --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\settings\Team16 final project.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\settings\Team16 final project.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.driver.xcl" 
 }
