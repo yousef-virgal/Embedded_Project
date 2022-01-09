@@ -20,7 +20,7 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         else
         {
             Set_Bit(GPIO_PORTA_DIR_R, pin);
-            Set_Bit(GPIO_PORTA_ODR_R, pin);
+            //Set_Bit(GPIO_PORTA_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTA_DEN_R, pin); //digital enabling the pin
         break;
@@ -39,7 +39,7 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         else
         {
             Set_Bit(GPIO_PORTB_DIR_R, pin);
-            Set_Bit(GPIO_PORTB_ODR_R, pin);
+            //Set_Bit(GPIO_PORTB_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTB_DEN_R, pin); //digital enabling the pin
 
@@ -59,7 +59,7 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         else
         {
             Set_Bit(GPIO_PORTC_DIR_R, pin);
-            Set_Bit(GPIO_PORTC_ODR_R, pin);
+            //Set_Bit(GPIO_PORTC_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTC_DEN_R, pin); //digital enabling the pin
         break;
@@ -78,7 +78,7 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         else
         {
             Set_Bit(GPIO_PORTD_DIR_R, pin);
-            Set_Bit(GPIO_PORTD_ODR_R, pin);
+            //Set_Bit(GPIO_PORTD_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTD_DEN_R, pin); //digital enabling the pin
         break;
@@ -97,7 +97,7 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         else
         {
             Set_Bit(GPIO_PORTE_DIR_R, pin);
-            Set_Bit(GPIO_PORTE_ODR_R, pin);
+            //Set_Bit(GPIO_PORTE_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTE_DEN_R, pin); //digital enabling the pin
 
@@ -117,7 +117,7 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         else
         {
             Set_Bit(GPIO_PORTF_DIR_R, pin);
-            Set_Bit(GPIO_PORTF_ODR_R, pin);
+           // Set_Bit(GPIO_PORTF_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTF_DEN_R, pin); //digital enabling the pin
         break;

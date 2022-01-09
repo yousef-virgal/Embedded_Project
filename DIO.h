@@ -1,5 +1,4 @@
-#ifndef DIO_H
-#define DIO_H
+
 #include "types.h"
 #include "bitwise_operations.h"
 #include "tm4c123gh6pm.h"
@@ -22,4 +21,3 @@ void DIO_WritePort(int8 port, int8 data);
 int8 DIO_ReadPin(int8 port,int8 pin);
 int8 DIO_ReadPort(int8 port);
 void DIO_TogglePin(int8 Port, int8 Pin);
-#endif

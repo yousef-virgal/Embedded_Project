@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.general.xcl" --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\settings\Team16 final project.Debug.general.xcl" --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\settings\Team16 final project.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\settings\Team16 final project.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\settings\Team16 final project.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\settings\Team16 final project.Debug.driver.xcl" 
 
 @echo off 
 :end

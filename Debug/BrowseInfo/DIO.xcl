@@ -1,15 +1,15 @@
-"D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\DIO.C"
+"D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\DIO.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\Debug\BrowseInfo\DIO.pbi.dep
+D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\Debug\BrowseInfo\DIO.pbi.dep
 -o
-D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project\Debug\BrowseInfo\DIO.pbi
+D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project\Debug\BrowseInfo\DIO.pbi
 -I
-D:\UNI\senior1\CSE211 Introduction to embedded systems\project\Embedded_Project
+D:\UNI\senior1\CSE211 Introduction to embedded systems\Group project team 16\Embedded_Project
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\aarch32
 -I
