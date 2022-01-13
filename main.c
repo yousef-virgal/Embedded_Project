@@ -179,7 +179,7 @@ void Pedestrian_Button_Handler(void)
     firedbefore = YES;
     // clear interrupt flags
   }
-  SystickReset(10);
+  SystickReset();
 }
 void Pedestrian_Timer_IntHandler(void)
 {
