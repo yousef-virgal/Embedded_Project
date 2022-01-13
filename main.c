@@ -6,9 +6,9 @@
 #define YES 1
 #define NO 0
 
-void Initializing_State(void); // function that setsup the intial state of the system
-void Initializing_Traffic_LED_Ports_Pins(void); //function that Initializes all the output ports for the traffic led systems 
-void Initializing_Pedestrian_LED_Ports_Pins(void); //function that Initializes all the output ports for the Pedestrian led systems
+void Initializing_State(void);                     // function that setsup the intial state of the system
+void Initializing_Traffic_LED_Ports_Pins(void);    // function that Initializes all the output ports for the traffic led systems
+void Initializing_Pedestrian_LED_Ports_Pins(void); // function that Initializes all the output ports for the Pedestrian led systems
 
 // enum that representes all the states possible in the traffic light system
 enum traffic
@@ -17,7 +17,7 @@ enum traffic
     yellow,
     green
 };
-// enum that representes which traffic light is currently changing colors 
+// enum that representes which traffic light is currently changing colors
 enum trafficstate
 {
     northsouth,
@@ -57,10 +57,10 @@ int main()
     // setingup the intial state of the system
     Initializing_State();
 
-    //configuring timers 0 and 2
+    // configuring timers 0 and 2
     Timer_Init(TIMER0, INTERRUPT);
     Timer_Init(TIMER2, INTERRUPT);
-    
+
     // setingup systick
     SystickDisable();
     SystickSetClockSource(internal);
@@ -82,7 +82,7 @@ void Traffic_Timer_IntHandler(void)
 // Timer0 A intrupt Handler
 // This function handles all transition from a state to another
 {
-    
+
     // stoping the timer
     Timer_Stop(TIMER0);
     switch (stateoftraffic)
@@ -158,52 +158,56 @@ void Traffic_Timer_IntHandler(void)
     default:
         break;
     }
-
 }
 
 void Pedestrian_Button_Handler(void)
 // this function handles the events when a pedestrian pushes a button
 {
-    int8 button1 = DIO_ReadPin(PORTB,0);
-    int8 button2 = DIO_ReadPin(PORTB,1);
+    int8 button1 = DIO_ReadPin(PORTB, 0);
+    int8 button2 = DIO_ReadPin(PORTB, 1);
     SystickEnable();
-    while(Systick_Is_Time_out() == 0){}
-
-    if(button1 == 1 && button2 == 1){
-        return 
+    while (Systick_Is_Time_out() == 0)
+    {
     }
 
-    if ( !(firedbefore == YES) && !((Get_Bit(GPIO_PORTB_RIS_R, 1) == 1) && (direction == eastwest)) && !((Get_Bit(GPIO_PORTB_RIS_R, 0) == 1) && (direction == northsouth)))
+    if (button1 == 0 || button2 == 0)
     {
-        // check if one second has passed or not
-        if (ONE_SECOND_PASSED == NO){
-            while(Get_Bit(TIMER2_CTL_R,0) == 1){}
+
+        if (!(firedbefore == YES) && !((Get_Bit(GPIO_PORTB_RIS_R, 1) == 1) && (direction == eastwest)) && !((Get_Bit(GPIO_PORTB_RIS_R, 0) == 1) && (direction == northsouth)))
+        {
+            // check if one second has passed or not
+            if (ONE_SECOND_PASSED == NO)
+            {
+                while (Get_Bit(TIMER2_CTL_R, 0) == 1)
+                {
+                }
+            }
+            // stop the timer
+            Timer_Stop(TIMER0);
+            // Initializie new timer to wait for 2 second
+            Timer_Init(TIMER1, INTERRUPT);
+            // timers traffic
+
+            // change LEDS colors
+            DIO_WritePin(PORTC, 4, 1);
+            DIO_WritePin(PORTC, 5, 0);
+            DIO_WritePin(PORTC, 6, 0);
+            DIO_WritePin(PORTB, 3, 1);
+            DIO_WritePin(PORTB, 6, 0);
+            DIO_WritePin(PORTB, 7, 0);
+
+            DIO_WritePin(PORTD, 2, 0);
+            DIO_WritePin(PORTD, 3, 1);
+            DIO_WritePin(PORTB, 5, 0);
+            DIO_WritePin(PORTB, 4, 1);
+
+            // change the states
+            ONE_SECOND_PASSED = NO;
+            firedbefore = YES;
+
+            // start the timer
+            Timer_Set(TIMER1, 2000);
         }
-        // stop the timer
-        Timer_Stop(TIMER0);
-        // Initializie new timer to wait for 2 second  
-        Timer_Init(TIMER1, INTERRUPT);
-        // timers traffic
-
-        // change LEDS colors
-        DIO_WritePin(PORTC, 4, 1);
-        DIO_WritePin(PORTC, 5, 0);
-        DIO_WritePin(PORTC, 6, 0);
-        DIO_WritePin(PORTB, 3, 1);
-        DIO_WritePin(PORTB, 6, 0);
-        DIO_WritePin(PORTB, 7, 0);
-
-        DIO_WritePin(PORTD, 2, 0);
-        DIO_WritePin(PORTD, 3, 1);
-        DIO_WritePin(PORTB, 5, 0);
-        DIO_WritePin(PORTB, 4, 1);
-
-        //change the states
-        ONE_SECOND_PASSED = NO;
-        firedbefore = YES;
-
-        // start the timer
-        Timer_Set(TIMER1, 2000);
     }
     // clear interrupt flags
     Set_Bit(GPIO_PORTB_ICR_R, 0);
@@ -212,8 +216,8 @@ void Pedestrian_Button_Handler(void)
 
 void Pedestrian_Timer_IntHandler(void)
 // this function is the handler for pedestrian timer (timer1), that waits for 2 seconds
-// when a timeout happens we retrive the old state and update the LEDS accrodingly and resume timer0 which is 
-// responsible for controlling the states of the traffic  
+// when a timeout happens we retrive the old state and update the LEDS accrodingly and resume timer0 which is
+// responsible for controlling the states of the traffic
 {
 
     Timer_Stop(TIMER1);
@@ -269,18 +273,18 @@ void Pedestrian_Timer_IntHandler(void)
     default:
         break;
     }
-    
+
     // update state variables
     firedbefore = NO;
     // start a new timer to delay the request of the pedestrian to cross if the
     // button was pressed after 1 second from the end of the Period of
 
-    // pedestrian crossing 
-    Timer_Set(TIMER2,1000);
+    // pedestrian crossing
+    Timer_Set(TIMER2, 1000);
 }
 
 void Initializing_State(void)
-// intilizes traffic states to red north-south , red east-west , and direction is north-south 
+// intilizes traffic states to red north-south , red east-west , and direction is north-south
 {
     // initializing open pedestrian cross1
     DIO_WritePin(PORTD, 2, 0);
@@ -295,14 +299,12 @@ void Initializing_State(void)
 
 void Initializing_Traffic_LED_Ports_Pins(void)
 {
-    // initialize LED Ports and pins for traffic light 
+    // initialize LED Ports and pins for traffic light
     // ports used B,C , pins 3,6,7 in B and pins 4,5,6 in C
-
 
     // initializing ports
     DIO_Init_Port(PORTB); // north south traffic
     DIO_Init_Port(PORTC); // east west traffic
-    
 
     // East-West Traffic
     DIO_Init_Pin(PORTC, 4, OUT_DIR); // Red
@@ -330,11 +332,12 @@ void Initializing_Pedestrian_LED_Ports_Pins(void)
     DIO_Init_Pin(PORTB, 4, OUT_DIR); // green
 }
 
-void Guard_Handler(void){
+void Guard_Handler(void)
+{
     // handles the guard condition of waiting 1 second to delay the request of the pedestrian to cross
 
-    //disable the timer
+    // disable the timer
     Timer_Stop(TIMER2);
-    //change the state 
+    // change the state
     ONE_SECOND_PASSED = YES;
 }
