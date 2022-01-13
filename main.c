@@ -38,23 +38,23 @@ int main()
   // enabling port b interrupts
   Set_Bit(NVIC_EN0_R, 1);
   // User Push buttons
-  DIO_Init_Pin(PORTB, 0, IN_DIR); // pedestrian 1
+  DIO_Init_Pin(PORTB, 0, IN_DIR); // pedestrian 1 (east west)
   Set_Bit(GPIO_PORTB_IEV_R, 0);   // assigning interrupt event for port b pin 0
   Set_Bit(GPIO_PORTB_IM_R, 0);    // interrupt masking for port b pin 0
-  DIO_Init_Pin(PORTB, 1, IN_DIR); // pedestrian 2
+  DIO_Init_Pin(PORTB, 1, IN_DIR); // pedestrian 2 (north south)
   Set_Bit(GPIO_PORTB_IEV_R, 1);   // assigning interrupt event for port b pin 1
   Set_Bit(GPIO_PORTB_IM_R, 1);    // interrupt masking for port b pin 1
-  // pedestrians lights 1
-  DIO_Init_Pin(PORTD, 2, OUT_DIR);
-  DIO_Init_Pin(PORTD, 3, OUT_DIR);
-  // pedestrians lights 2
-  DIO_Init_Pin(PORTB, 5, OUT_DIR);
-  DIO_Init_Pin(PORTB, 4, OUT_DIR);
-  // initializing closed pedestrian cross1
-  DIO_WritePin(PORTD, 2, 1);
-  DIO_WritePin(PORTD, 3, 0);
-  // initializing closed pedestrian cross1
-  DIO_WritePin(PORTB, 5, 1);
+  // pedestrians lights 1 -> along side east west streat
+  DIO_Init_Pin(PORTD, 2, OUT_DIR); // red
+  DIO_Init_Pin(PORTD, 3, OUT_DIR); // green
+  // pedestrians lights 2 along side  north south
+  DIO_Init_Pin(PORTB, 5, OUT_DIR); // red
+  DIO_Init_Pin(PORTB, 4, OUT_DIR); // green
+  // initializing open pedestrian cross1
+  DIO_WritePin(PORTD, 2, 0);
+  DIO_WritePin(PORTD, 3, 1);
+  // initializing open pedestrian cross1
+  DIO_WritePin(PORTB, 5, 0);
   DIO_WritePin(PORTB, 4, 1);
   // initial traffic lights before FSM starts
   DIO_WritePin(PORTC, 4, 1);
@@ -90,14 +90,21 @@ void Traffic_Timer_IntHandler(void)
       direction = eastwest;
       DIO_WritePin(PORTC, 4, 0); // colse Eastwest red
       DIO_WritePin(PORTC, 5, 1); // open Eastwest green
-      Timer_Set(TIMER0, 5000);   // setting green interval for 5 seconds
+
+      DIO_WritePin(PORTB, 5, 1);
+      DIO_WritePin(PORTB, 4, 0);
+      Timer_Set(TIMER0, 5000); // setting green interval for 5 seconds
     }
     else
     {
       direction = northsouth;
       DIO_WritePin(PORTB, 3, 0); // colse Northsouth red
       DIO_WritePin(PORTB, 6, 1); // open Northsouth green
-      Timer_Set(TIMER0, 5000);   // setting green interval for 5 seconds
+
+      DIO_WritePin(PORTD, 2, 1);
+      DIO_WritePin(PORTD, 3, 0);
+
+      Timer_Set(TIMER0, 5000); // setting green interval for 5 seconds
     }
     stateoftraffic = green;
     break;
@@ -125,14 +132,21 @@ void Traffic_Timer_IntHandler(void)
 
       DIO_WritePin(PORTB, 3, 1); // open Northsouth red
       DIO_WritePin(PORTB, 7, 0); // close Northsouth yellow
-      Timer_Set(TIMER0, 1000);   // setting red interval for 1 second
+
+      DIO_WritePin(PORTD, 2, 0);
+      DIO_WritePin(PORTD, 3, 1);
+      Timer_Set(TIMER0, 1000); // setting red interval for 1 second
     }
     else
     {
 
       DIO_WritePin(PORTC, 4, 1); // open Eastwest red
       DIO_WritePin(PORTC, 6, 0); // close Eastwest yellow
-      Timer_Set(TIMER0, 1000);   // setting red interval for 1 second
+
+      DIO_WritePin(PORTB, 5, 0);
+      DIO_WritePin(PORTB, 4, 1);
+
+      Timer_Set(TIMER0, 1000); // setting red interval for 1 second
     }
     stateoftraffic = red;
     break;
@@ -145,41 +159,37 @@ void Traffic_Timer_IntHandler(void)
 }
 void Pedestrian_Button_Handler(void)
 {
-  // Enable systick
-  SystickEnable();
-  //wait for systick to timeout
-  while (Systick_Is_Time_out() == 0)
-  {
-  }
-  SystickDisable();
-  //check if there is any button still pushed
-  if (DIO_ReadPin(PORTB, 0) == 0 || DIO_ReadPin(PORTB, 1) == 0)
-  {
-    if (firedbefore == YES)
-    {
-      Set_Bit(GPIO_PORTB_ICR_R, 0);
-      Set_Bit(GPIO_PORTB_ICR_R, 1);
-      return;
-    }
 
-    Timer_Stop(TIMER0);
-    Timer_Init(TIMER1, INTERRUPT);
-    // timers traffic
-    // change leds
-    DIO_WritePin(PORTC, 4, 1);
-    DIO_WritePin(PORTC, 5, 0);
-    DIO_WritePin(PORTC, 6, 0);
-    DIO_WritePin(PORTB, 3, 1);
-    DIO_WritePin(PORTB, 6, 0);
-    DIO_WritePin(PORTB, 7, 0);
-    // start timer
-    Timer_Set(TIMER1, 2000);
-    DIO_WritePin(PORTD, 2, 0);
-    DIO_WritePin(PORTD, 3, 1);
-    firedbefore = YES;
-    // clear interrupt flags
+  int8 button1 = DIO_ReadPin(PORTB, 0);
+  int8 button2 = DIO_ReadPin(PORTB, 1);
+
+  if (firedbefore == YES)
+  {
+    Set_Bit(GPIO_PORTB_ICR_R, 0);
+    Set_Bit(GPIO_PORTB_ICR_R, 1);
+    return;
   }
-  SystickReset();
+
+  Timer_Stop(TIMER0);
+  Timer_Init(TIMER1, INTERRUPT);
+  // timers traffic
+  // change leds
+  DIO_WritePin(PORTC, 4, 1);
+  DIO_WritePin(PORTC, 5, 0);
+  DIO_WritePin(PORTC, 6, 0);
+  DIO_WritePin(PORTB, 3, 1);
+  DIO_WritePin(PORTB, 6, 0);
+  DIO_WritePin(PORTB, 7, 0);
+
+  DIO_WritePin(PORTD, 2, 0);
+  DIO_WritePin(PORTD, 3, 1);
+  DIO_WritePin(PORTB, 5, 0);
+  DIO_WritePin(PORTB, 4, 1);
+  // start timer
+  Timer_Set(TIMER1, 2000);
+
+  firedbefore = YES;
+  // clear interrupt flags
 }
 void Pedestrian_Timer_IntHandler(void)
 {
@@ -197,6 +207,9 @@ void Pedestrian_Timer_IntHandler(void)
     {
       DIO_WritePin(PORTC, 4, 0); // close northsouth red
       DIO_WritePin(PORTC, 5, 1); // open Northsouth green
+      // close pedesttrian lights
+      DIO_WritePin(PORTB, 5, 1);
+      DIO_WritePin(PORTB, 4, 0);
       Timer_Resume(TIMER0);      // Resume the timer from previous reload value
     }
     else
@@ -204,6 +217,9 @@ void Pedestrian_Timer_IntHandler(void)
 
       DIO_WritePin(PORTB, 3, 0); // close eastwest red
       DIO_WritePin(PORTB, 6, 1); // open eastwest green
+
+      DIO_WritePin(PORTD, 2, 1);
+      DIO_WritePin(PORTD, 3, 0);
       Timer_Resume(TIMER0);      // Resume the timer from previous reload value
     }
     break;
@@ -212,6 +228,9 @@ void Pedestrian_Timer_IntHandler(void)
     {
       DIO_WritePin(PORTC, 4, 0); // close northsouth red
       DIO_WritePin(PORTC, 6, 1); // open northsouth yellow
+
+      DIO_WritePin(PORTB, 5, 1);
+      DIO_WritePin(PORTB, 4, 0);
       Timer_Resume(TIMER0);      // Resume the timer from previous reload value
     }
     else
@@ -219,6 +238,9 @@ void Pedestrian_Timer_IntHandler(void)
 
       DIO_WritePin(PORTB, 3, 0); // close eastwest red
       DIO_WritePin(PORTB, 7, 1); // open eastwest yellow
+
+      DIO_WritePin(PORTD, 2, 1);
+      DIO_WritePin(PORTD, 3, 0);
       Timer_Resume(TIMER0);      // Resume the timer from previous reload value
     }
     break;
@@ -227,9 +249,11 @@ void Pedestrian_Timer_IntHandler(void)
     break;
   }
   // open pedestrian reds again and close pedestrian greens
-  DIO_WritePin(PORTD, 2, 1);
-  DIO_WritePin(PORTD, 3, 0);
+  // DIO_WritePin(PORTD, 2, 1);
+  // DIO_WritePin(PORTD, 3, 0);
 
+  // DIO_WritePin(PORTB, 5, 1);
+  // DIO_WritePin(PORTB, 4, 0);
   //
   // enabling interrupts for pedestrians again
   firedbefore = NO;
