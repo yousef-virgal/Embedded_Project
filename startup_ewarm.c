@@ -46,6 +46,7 @@ static void IntDefaultHandler(void);
 void Pedestrian_Timer_IntHandler(void);
 void Traffic_Timer_IntHandler(void);
 void Pedestrian_Button_Handler(void);
+void Guard_Handler(void);
 //*****************************************************************************
 //
 // The entry point for the application startup code.
@@ -122,7 +123,7 @@ __root const uVectorEntry __vector_table[] @ ".intvec" =
     IntDefaultHandler,                      // Timer 0 subtimer B
     Pedestrian_Timer_IntHandler,                      // Timer 1 subtimer A
     IntDefaultHandler,                      // Timer 1 subtimer B
-    IntDefaultHandler,                      // Timer 2 subtimer A
+    Guard_Handler,                      // Timer 2 subtimer A
     IntDefaultHandler,                      // Timer 2 subtimer B
     IntDefaultHandler,                      // Analog Comparator 0
     IntDefaultHandler,                      // Analog Comparator 1
