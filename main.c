@@ -51,7 +51,7 @@ int main()
 
     Initializing_Pedestrian_LED_Ports_Pins();
 
-    InitializingState();
+    Initializing_State();
 
     Timer_Init(TIMER0, INTERRUPT);
     Timer_Init(TIMER2, INTERRUPT);
@@ -162,7 +162,7 @@ void Pedestrian_Button_Handler(void)
         if (ONE_SECOND_PASSED == NO){
             while(Get_Bit(TIMER2_CTL_R,0) == 1){}
         }
-        
+
         Timer_Stop(TIMER0);
         Timer_Init(TIMER1, INTERRUPT);
         // timers traffic
