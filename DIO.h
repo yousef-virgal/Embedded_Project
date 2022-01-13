@@ -15,9 +15,11 @@
 #define One 1
 #define Zero 0
 
-void DIO_Init(int8 port,int8 pin,int8 dir);
+void DIO_Init_Port(int8 port);
+void DIO_Init_Pin(int8 port,int8 pin,int8 dir);
 void DIO_WritePin(int8 port,int8 pin, int8 data);
 void DIO_WritePort(int8 port, int8 data);
 int8 DIO_ReadPin(int8 port,int8 pin);
 int8 DIO_ReadPort(int8 port);
 void DIO_TogglePin(int8 Port, int8 Pin);
+

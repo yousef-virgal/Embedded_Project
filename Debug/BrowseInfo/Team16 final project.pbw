@@ -92890,16 +92890,44 @@
     "scope": null
   },
   {
-    "ID": "c:@F@DIO_Init",
+    "ID": "c:@F@DIO_WritePort",
     "What": "Function",
     "defdec": "Def",
-    "display": "void DIO_Init(int8, int8, int8)",
+    "display": "void DIO_WritePort(int8, int8)",
     "location": {
       "column": "6",
       "line": "3",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
-    "name": "DIO_Init",
+    "name": "DIO_WritePort",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DIO_Init_Pin",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void DIO_Init_Pin(int8, int8, int8)",
+    "location": {
+      "column": "6",
+      "line": "73",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
+    },
+    "name": "DIO_Init_Pin",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DIO_Init_Port",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void DIO_Init_Port(int8)",
+    "location": {
+      "column": "6",
+      "line": "167",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
+    },
+    "name": "DIO_Init_Port",
     "origin": "project_file",
     "scope": null
   },
@@ -92910,24 +92938,10 @@
     "display": "void DIO_WritePin(int8, int8, int8)",
     "location": {
       "column": "6",
-      "line": "128",
+      "line": "217",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "DIO_WritePin",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_WritePort",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DIO_WritePort(int8, int8)",
-    "location": {
-      "column": "6",
-      "line": "196",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
-    },
-    "name": "DIO_WritePort",
     "origin": "project_file",
     "scope": null
   },
@@ -92938,7 +92952,7 @@
     "display": "int8 DIO_ReadPin(int8, int8)",
     "location": {
       "column": "6",
-      "line": "266",
+      "line": "286",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "DIO_ReadPin",
@@ -92946,13 +92960,13 @@
     "scope": null
   },
   {
-    "ID": "c:DIO.c@7837@F@DIO_ReadPin@Pindata",
+    "ID": "c:DIO.c@8125@F@DIO_ReadPin@Pindata",
     "What": "Variable",
     "defdec": "Def",
     "display": "Pindata",
     "location": {
       "column": "10",
-      "line": "268",
+      "line": "288",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "Pindata",
@@ -92966,7 +92980,7 @@
     "display": "int8 DIO_ReadPort(int8)",
     "location": {
       "column": "6",
-      "line": "294",
+      "line": "314",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "DIO_ReadPort",
@@ -92974,13 +92988,13 @@
     "scope": null
   },
   {
-    "ID": "c:DIO.c@8486@F@DIO_ReadPort@PortData",
+    "ID": "c:DIO.c@8774@F@DIO_ReadPort@PortData",
     "What": "Variable",
     "defdec": "Def",
     "display": "PortData",
     "location": {
       "column": "10",
-      "line": "296",
+      "line": "316",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "PortData",
@@ -92994,7 +93008,7 @@
     "display": "void delay(int)",
     "location": {
       "column": "6",
-      "line": "322",
+      "line": "342",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "delay",
@@ -93002,13 +93016,13 @@
     "scope": null
   },
   {
-    "ID": "c:DIO.c@9056@F@delay@i",
+    "ID": "c:DIO.c@9344@F@delay@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "14",
-      "line": "324",
+      "line": "344",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "i",
@@ -93022,11 +93036,95 @@
     "display": "void DIO_TogglePin(int8, int8)",
     "location": {
       "column": "6",
-      "line": "329",
+      "line": "349",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.c"
     },
     "name": "DIO_TogglePin",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:bitwise_operations.h@10@macro@Set_Bit",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Set_Bit",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
+    },
+    "name": "Set_Bit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:bitwise_operations.h@60@macro@Clear_Bit",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Clear_Bit",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
+    },
+    "name": "Clear_Bit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:bitwise_operations.h@116@macro@Get_Bit",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Get_Bit",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
+    },
+    "name": "Get_Bit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:bitwise_operations.h@173@macro@Toggle_Bit",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Toggle_Bit",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
+    },
+    "name": "Toggle_Bit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:bitwise_operations.h@231@macro@Set_Register",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Set_Register",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
+    },
+    "name": "Set_Register",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:bitwise_operations.h@287@macro@Get_Register",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Get_Register",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
+    },
+    "name": "Get_Register",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -94472,30 +94570,58 @@
     "scope": null
   },
   {
-    "ID": "c:@F@DIO_Init",
+    "ID": "c:@F@DIO_Init_Port",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void DIO_Init(int8, int8, int8)",
+    "display": "void DIO_Init_Port(int8)",
     "location": {
       "column": "6",
       "line": "18",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
-    "name": "DIO_Init",
+    "name": "DIO_Init_Port",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@DIO_Init",
+    "ID": "c:@F@DIO_Init_Port",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void DIO_Init(int8, int8, int8)",
+    "display": "void DIO_Init_Port(int8)",
     "location": {
       "column": "6",
       "line": "18",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
-    "name": "DIO_Init",
+    "name": "DIO_Init_Port",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DIO_Init_Pin",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DIO_Init_Pin(int8, int8, int8)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
+    },
+    "name": "DIO_Init_Pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DIO_Init_Pin",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DIO_Init_Pin(int8, int8, int8)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
+    },
+    "name": "DIO_Init_Pin",
     "origin": "user_include",
     "scope": null
   },
@@ -94506,7 +94632,7 @@
     "display": "void DIO_WritePin(int8, int8, int8)",
     "location": {
       "column": "6",
-      "line": "19",
+      "line": "20",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_WritePin",
@@ -94520,7 +94646,7 @@
     "display": "void DIO_WritePin(int8, int8, int8)",
     "location": {
       "column": "6",
-      "line": "19",
+      "line": "20",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_WritePin",
@@ -94534,7 +94660,7 @@
     "display": "void DIO_WritePort(int8, int8)",
     "location": {
       "column": "6",
-      "line": "20",
+      "line": "21",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_WritePort",
@@ -94548,7 +94674,7 @@
     "display": "void DIO_WritePort(int8, int8)",
     "location": {
       "column": "6",
-      "line": "20",
+      "line": "21",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_WritePort",
@@ -94562,7 +94688,7 @@
     "display": "int8 DIO_ReadPin(int8, int8)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "22",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_ReadPin",
@@ -94576,7 +94702,7 @@
     "display": "int8 DIO_ReadPin(int8, int8)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "22",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_ReadPin",
@@ -94590,7 +94716,7 @@
     "display": "int8 DIO_ReadPort(int8)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "23",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_ReadPort",
@@ -94604,7 +94730,7 @@
     "display": "int8 DIO_ReadPort(int8)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "23",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_ReadPort",
@@ -94618,7 +94744,7 @@
     "display": "void DIO_TogglePin(int8, int8)",
     "location": {
       "column": "6",
-      "line": "23",
+      "line": "24",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_TogglePin",
@@ -94632,7 +94758,7 @@
     "display": "void DIO_TogglePin(int8, int8)",
     "location": {
       "column": "6",
-      "line": "23",
+      "line": "24",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\DIO.h"
     },
     "name": "DIO_TogglePin",
@@ -95961,90 +96087,6 @@
     "scope": null
   },
   {
-    "ID": "c:bitwise_operations.h@10@macro@Set_Bit",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Set_Bit",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
-    },
-    "name": "Set_Bit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:bitwise_operations.h@60@macro@Clear_Bit",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Clear_Bit",
-    "location": {
-      "column": "9",
-      "line": "3",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
-    },
-    "name": "Clear_Bit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:bitwise_operations.h@116@macro@Get_Bit",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Get_Bit",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
-    },
-    "name": "Get_Bit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:bitwise_operations.h@173@macro@Toggle_Bit",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Toggle_Bit",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
-    },
-    "name": "Toggle_Bit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:bitwise_operations.h@231@macro@Set_Register",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Set_Register",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
-    },
-    "name": "Set_Register",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:bitwise_operations.h@287@macro@Get_Register",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Get_Register",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\bitwise_operations.h"
-    },
-    "name": "Get_Register",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:DLib_Defaults.h@1169@macro@_DLIB_DEFAULTS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -97123,6 +97165,34 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@69@macro@YES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "YES",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
+    },
+    "name": "YES",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@84@macro@NO",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "NO",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
+    },
+    "name": "NO",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@E@traffic",
     "What": "Enum",
     "defdec": "Def",
@@ -97135,7 +97205,7 @@
         "display": "red",
         "location": {
           "column": "3",
-          "line": "7",
+          "line": "8",
           "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
         },
         "name": "red",
@@ -97149,7 +97219,7 @@
         "display": "yellow",
         "location": {
           "column": "3",
-          "line": "8",
+          "line": "9",
           "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
         },
         "name": "yellow",
@@ -97163,7 +97233,7 @@
         "display": "green",
         "location": {
           "column": "3",
-          "line": "9",
+          "line": "10",
           "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
         },
         "name": "green",
@@ -97173,7 +97243,7 @@
     ],
     "location": {
       "column": "6",
-      "line": "5",
+      "line": "6",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "traffic",
@@ -97193,7 +97263,7 @@
         "display": "northsouth",
         "location": {
           "column": "3",
-          "line": "13",
+          "line": "14",
           "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
         },
         "name": "northsouth",
@@ -97207,7 +97277,7 @@
         "display": "eastwest",
         "location": {
           "column": "3",
-          "line": "14",
+          "line": "15",
           "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
         },
         "name": "eastwest",
@@ -97217,7 +97287,7 @@
     ],
     "location": {
       "column": "6",
-      "line": "11",
+      "line": "12",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "trafficstate",
@@ -97231,7 +97301,7 @@
     "display": "stateoftraffic",
     "location": {
       "column": "21",
-      "line": "16",
+      "line": "17",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "stateoftraffic",
@@ -97245,10 +97315,24 @@
     "display": "direction",
     "location": {
       "column": "27",
-      "line": "17",
+      "line": "18",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "direction",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@firedbefore",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "firedbefore",
+    "location": {
+      "column": "13",
+      "line": "20",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
+    },
+    "name": "firedbefore",
     "origin": "project_file",
     "scope": null
   },
@@ -97258,8 +97342,8 @@
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
-      "column": "5",
-      "line": "18",
+      "column": "7",
+      "line": "21",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "main",
@@ -97273,7 +97357,7 @@
     "display": "void Traffic_Timer_IntHandler(void)",
     "location": {
       "column": "6",
-      "line": "56",
+      "line": "71",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "Traffic_Timer_IntHandler",
@@ -97287,7 +97371,7 @@
     "display": "void Pedestrian_Button_Handler(void)",
     "location": {
       "column": "6",
-      "line": "128",
+      "line": "138",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "Pedestrian_Button_Handler",
@@ -97301,7 +97385,7 @@
     "display": "void Pedestrian_Timer_IntHandler(void)",
     "location": {
       "column": "6",
-      "line": "148",
+      "line": "166",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "Pedestrian_Timer_IntHandler",

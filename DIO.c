@@ -1,16 +1,81 @@
 #include "DIO.h"
 #include "stdint.h"
-void DIO_Init(int8 port, int8 pin, int8 dir)
+void DIO_WritePort(int8 port, int8 data)
+{
+    switch (port)
+    {
+    case PORTA:
+        if (data == 1)
+        {
+            GPIO_PORTA_DATA_R = 0xff;
+        }
+        else
+        {
+            GPIO_PORTA_DATA_R = 0x00;
+        }
+        break;
+    case PORTB:
+        if (data == 1)
+        {
+            GPIO_PORTB_DATA_R = 0xff;
+        }
+        else
+        {
+            GPIO_PORTB_DATA_R = 0x00;
+        }
+        break;
+    case PORTC:
+        if (data == 1)
+        {
+            GPIO_PORTC_DATA_R = 0xff;
+        }
+        else
+        {
+            GPIO_PORTC_DATA_R = 0x00;
+        }
+        break;
+    case PORTD:
+        if (data == 1)
+        {
+            GPIO_PORTD_DATA_R = 0xff;
+        }
+        else
+        {
+            GPIO_PORTD_DATA_R = 0x00;
+        }
+        break;
+
+    case PORTE:
+        if (data == 1)
+        {
+            GPIO_PORTE_DATA_R = 0xff;
+        }
+        else
+        {
+            GPIO_PORTE_DATA_R = 0x00;
+        }
+        break;
+    case PORTF:
+        if (data == 1)
+        {
+            GPIO_PORTF_DATA_R = 0xff;
+        }
+        else
+        {
+            GPIO_PORTF_DATA_R = 0x00;
+        }
+        break;
+
+    default:
+        break;
+    }
+}
+void DIO_Init_Pin(int8 port, int8 pin, int8 dir)
 {
 
     switch (port)
     {
     case PORTA:
-        Set_Bit(SYSCTL_RCGCGPIO_R, PORTA);           //register clockgating
-        while (Get_Bit(SYSCTL_PRGPIO_R, PORTA) == 0) //pireferal ready GPIO register
-        {
-        }; //busy wait till clock reaches the port
-        GPIO_PORTA_LOCK_R = 0x4C4F434B;
         Set_Bit(GPIO_PORTA_CR_R, pin); //setting clock for port selected pin
         if (dir == IN_DIR)
         {
@@ -25,11 +90,6 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         Set_Bit(GPIO_PORTA_DEN_R, pin); //digital enabling the pin
         break;
     case PORTB:
-        Set_Bit(SYSCTL_RCGCGPIO_R, PORTB);           //register clockgating
-        while (Get_Bit(SYSCTL_PRGPIO_R, PORTB) == 0) //pireferal ready GPIO register
-        {
-        }; //busy wait till clock reaches the port
-        GPIO_PORTB_LOCK_R = 0x4C4F434B;
         Set_Bit(GPIO_PORTB_CR_R, pin); //setting clock for port selected pin
         if (dir == IN_DIR)
         {
@@ -45,11 +105,6 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
 
         break;
     case PORTC:
-        Set_Bit(SYSCTL_RCGCGPIO_R, PORTC);           //register clockgating
-        while (Get_Bit(SYSCTL_PRGPIO_R, PORTC) == 0) //pireferal ready GPIO register
-        {
-        }; //busy wait till clock reaches the port
-        GPIO_PORTC_LOCK_R = 0x4C4F434B;
         Set_Bit(GPIO_PORTC_CR_R, pin); //setting clock for port selected pin
         if (dir == IN_DIR)
         {
@@ -64,11 +119,6 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         Set_Bit(GPIO_PORTC_DEN_R, pin); //digital enabling the pin
         break;
     case PORTD:
-        Set_Bit(SYSCTL_RCGCGPIO_R, PORTD);           //register clockgating
-        while (Get_Bit(SYSCTL_PRGPIO_R, PORTD) == 0) //pireferal ready GPIO register
-        {
-        }; //busy wait till clock reaches the port
-        GPIO_PORTD_LOCK_R = 0x4C4F434B;
         Set_Bit(GPIO_PORTD_CR_R, pin); //setting clock for port selected pin
         if (dir == IN_DIR)
         {
@@ -83,11 +133,6 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         Set_Bit(GPIO_PORTD_DEN_R, pin); //digital enabling the pin
         break;
     case PORTE:
-        Set_Bit(SYSCTL_RCGCGPIO_R, PORTE);           //register clockgating
-        while (Get_Bit(SYSCTL_PRGPIO_R, PORTE) == 0) //pireferal ready GPIO register
-        {
-        }; //busy wait till clock reaches the port
-        GPIO_PORTE_LOCK_R = 0x4C4F434B;
         Set_Bit(GPIO_PORTE_CR_R, pin); //setting clock for port selected pin
         if (dir == IN_DIR)
         {
@@ -100,14 +145,8 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
             //Set_Bit(GPIO_PORTE_ODR_R, pin);
         }
         Set_Bit(GPIO_PORTE_DEN_R, pin); //digital enabling the pin
-
         break;
     case PORTF:
-        Set_Bit(SYSCTL_RCGCGPIO_R, PORTF);           //register clockgating
-        while (Get_Bit(SYSCTL_PRGPIO_R, PORTF) == 0) //pireferal ready GPIO register
-        {
-        };                              //busy wait till clock reaches the port
-        GPIO_PORTF_LOCK_R = 0x4C4F434B; //unlock the port for using
         Set_Bit(GPIO_PORTF_CR_R, pin);  //setting clock for port selected pin
         if (dir == IN_DIR)
         {
@@ -121,6 +160,56 @@ void DIO_Init(int8 port, int8 pin, int8 dir)
         }
         Set_Bit(GPIO_PORTF_DEN_R, pin); //digital enabling the pin
         break;
+    default:
+        break;
+    }
+}
+void DIO_Init_Port(int8 port)
+{
+    switch (port)
+    {
+    case PORTA:
+        Set_Bit(SYSCTL_RCGCGPIO_R, PORTA);           //register clockgating
+        while (Get_Bit(SYSCTL_PRGPIO_R, PORTA) == 0) //pireferal ready GPIO register
+        {
+        }; //busy wait till clock reaches the port
+        GPIO_PORTA_LOCK_R = 0x4C4F434B;
+        break;
+    case PORTB:
+        Set_Bit(SYSCTL_RCGCGPIO_R, PORTB);           //register clockgating
+        while (Get_Bit(SYSCTL_PRGPIO_R, PORTB) == 0) //pireferal ready GPIO register
+        {
+        }; //busy wait till clock reaches the port
+        GPIO_PORTB_LOCK_R = 0x4C4F434B;
+
+        break;
+    case PORTC:
+        Set_Bit(SYSCTL_RCGCGPIO_R, PORTC);           //register clockgating
+        while (Get_Bit(SYSCTL_PRGPIO_R, PORTC) == 0) //pireferal ready GPIO register
+        {
+        }; //busy wait till clock reaches the port
+        GPIO_PORTC_LOCK_R = 0x4C4F434B;
+        break;
+    case PORTD:
+        Set_Bit(SYSCTL_RCGCGPIO_R, PORTD);           //register clockgating
+        while (Get_Bit(SYSCTL_PRGPIO_R, PORTD) == 0) //pireferal ready GPIO register
+        {
+        }; //busy wait till clock reaches the port
+        GPIO_PORTD_LOCK_R = 0x4C4F434B;
+        break;
+    case PORTE:
+        Set_Bit(SYSCTL_RCGCGPIO_R, PORTE);           //register clockgating
+        while (Get_Bit(SYSCTL_PRGPIO_R, PORTE) == 0) //pireferal ready GPIO register
+        {
+        }; //busy wait till clock reaches the port
+        GPIO_PORTE_LOCK_R = 0x4C4F434B;
+        break;
+    case PORTF:
+        Set_Bit(SYSCTL_RCGCGPIO_R, PORTF);           //register clockgating
+        while (Get_Bit(SYSCTL_PRGPIO_R, PORTF) == 0) //pireferal ready GPIO register
+        {
+        };                              //busy wait till clock reaches the port
+        GPIO_PORTF_LOCK_R = 0x4C4F434B; //unlock the port for using
     default:
         break;
     }
@@ -193,76 +282,7 @@ void DIO_WritePin(int8 port, int8 pin, int8 data) //preconditions : the port is 
         break;
     }
 }
-void DIO_WritePort(int8 port, int8 data)
-{
-    switch (port)
-    {
-    case PORTA:
-        if (data == 1)
-        {
-            GPIO_PORTA_DATA_R = 0xff;
-        }
-        else
-        {
-            GPIO_PORTA_DATA_R = 0x00;
-        }
-        break;
-    case PORTB:
-        if (data == 1)
-        {
-            GPIO_PORTB_DATA_R = 0xff;
-        }
-        else
-        {
-            GPIO_PORTB_DATA_R = 0x00;
-        }
-        break;
-    case PORTC:
-        if (data == 1)
-        {
-            GPIO_PORTC_DATA_R = 0xff;
-        }
-        else
-        {
-            GPIO_PORTC_DATA_R = 0x00;
-        }
-        break;
-    case PORTD:
-        if (data == 1)
-        {
-            GPIO_PORTD_DATA_R = 0xff;
-        }
-        else
-        {
-            GPIO_PORTD_DATA_R = 0x00;
-        }
-        break;
 
-    case PORTE:
-        if (data == 1)
-        {
-            GPIO_PORTE_DATA_R = 0xff;
-        }
-        else
-        {
-            GPIO_PORTE_DATA_R = 0x00;
-        }
-        break;
-    case PORTF:
-        if (data == 1)
-        {
-            GPIO_PORTF_DATA_R = 0xff;
-        }
-        else
-        {
-            GPIO_PORTF_DATA_R = 0x00;
-        }
-        break;
-
-    default:
-        break;
-    }
-}
 int8 DIO_ReadPin(int8 port, int8 pin)
 {
     int8 Pindata;
