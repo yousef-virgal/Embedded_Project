@@ -9,6 +9,9 @@
 void SystickDisable(void);
 void SystickEnable (void);
 void SystickPeriod(uint32_t ui32Period);
+void SystickReset(void);
 bool Systick_Is_Time_out(void);
 void SystickSetClockSource (int source);
+void SysticEnableIntrupt(void);
+void SysticDisableIntrupt(void);
 #endif
