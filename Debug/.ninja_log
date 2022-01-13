@@ -1,87 +1,19 @@
 # ninja log v5
-70	310	6632334328728159	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/startup_ewarm.o	6152bc1e72fbb536
-3	406	6632334329964842	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
-265	470	6632334330603108	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/systick.o	18266028b03a29ca
-36	419	6632335750405841	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/MyTimer.o	e9a22e21433ebaf9
-58	431	6632335750385899	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/systick.o	18266028b03a29ca
-3	440	6632335750465684	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
-2	231	6632337791499975	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
-17	364	6632364395166423	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/MyTimer.o	e9a22e21433ebaf9
-2	402	6632364395495808	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	cdb60cdd27dbba71
-50	250	6632365549552289	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/systick.o	c5c7d999cb49da3f
-10	281	6632365549692886	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/MyTimer.o	4576dca73273a2f7
 27	297	6632365550105311	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/DIO.o	74b65fd10684393
-228	428	6632365551566843	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/startup_ewarm.o	6a2d9e0fcefa184b
-2	256	6632366559116915	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/main.o	a22bed61735a6571
-262	339	6632366559949214	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Exe/Team16 final project.out	37c4092e162d5fb7
-4	442	6634214004996687	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-20	240	6634214041918029	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/startup_ewarm.o	10d7a9c4eceffa7a
-76	297	6634214042456602	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/systick.o	6cbbe1c2ce7f3803
-11	304	6634214042476537	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/MyTimer.o	99037715447bb19e
-47	344	6634214042955284	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
-352	795	6634214047503143	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-7	487	6634225012801648	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/MyTimer.o	99037715447bb19e
-16	502	6634225013529701	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-99	510	6634225013549648	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/systick.o	6cbbe1c2ce7f3803
-4	235	6634225247556983	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
-244	349	6634225248714080	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-88	319	6634226120706343	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/systick.o	6cbbe1c2ce7f3803
-17	327	6634226120706343	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-3	369	6634226120796081	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/MyTimer.o	99037715447bb19e
-53	390	6634226121414426	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
-396	489	6634226122471602	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-3	306	6634228591466001	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-313	440	6634228592812404	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	234	6634231207430820	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-240	343	6634231208527874	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-6	333	6634239388939487	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
-339	417	6634239389817282	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	374	6634240089506799	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
-383	484	6634240090633778	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	304	6634248670255057	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-311	393	6634248671202540	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-6	297	6634251893409554	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-303	378	6634251894257305	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	306	6634257632960999	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-312	387	6634257633828748	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-3	256	6634258869393361	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-265	344	6634258870281000	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-2	365	6634261109353927	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-374	469	6634261110470938	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-5	348	6634269757402541	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-355	433	6634269758599351	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-2	284	6634273099681082	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-291	368	6634273100548604	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-2	115	6634275569836757	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/startup_ewarm.o	10d7a9c4eceffa7a
-125	202	6634275570724389	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-3	320	6634276298648354	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-326	402	6634276299506063	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-3	248	6634280634815290	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-259	339	6634280635772727	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	241	6634281177649155	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-248	347	6634281178736340	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-12	408	6635853881997098	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-417	843	6635853886396885	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-3	309	6635858498571803	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/startup_ewarm.o	10d7a9c4eceffa7a
-12	330	6635858498761306	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-338	435	6635858499878311	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-5	263	6635861994481614	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-268	350	6635861995369232	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	289	6635910387747175	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-298	395	6635910388834274	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-4	196	6635912025741464	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-211	299	6635912026778684	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-2	291	6635916937635589	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-299	380	6635916938563100	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-12	256	6637456608564838	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/startup_ewarm.o	10d7a9c4eceffa7a
-3	347	6637456609462431	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/MyTimer.o	99037715447bb19e
-35	369	6637456609671874	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-262	419	6637456610200460	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/systick.o	6cbbe1c2ce7f3803
-61	454	6637456610529579	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
-460	712	6637456613042961	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-3	264	6637462075612140	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-270	346	6637462076459763	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
 3	121	6637463379035242	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/startup_ewarm.o	10d7a9c4eceffa7a
-127	209	6637463379952784	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
-6	178	6637466256050421	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
-187	257	6637466256878202	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
+2	256	6632366559116915	D:/UNI/senior1/CSE211 Introduction to embedded systems/project/Embedded_Project/Debug/Obj/main.o	a22bed61735a6571
+3	255	6637496296986782	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
+262	419	6637456610200460	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/systick.o	6cbbe1c2ce7f3803
+3	347	6637456609462431	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/MyTimer.o	99037715447bb19e
+61	454	6637456610529579	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/DIO.o	dcbee7e03b04d9
+264	348	6637496297944235	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
+3	174	6637499178858682	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
+182	252	6637499179676495	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
+3	281	6637503682647399	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
+290	360	6637503683465217	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
+3	176	6637504890188389	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
+183	255	6637504890996388	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
+3	284	6637505679696662	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
+291	364	6637505680524604	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3
+3	254	6637506929043396	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Obj/main.o	40164b5f47d37ce2
+262	339	6637506929961047	D:/UNI/senior1/CSE211 Introduction to embedded systems/Group project team 16/Embedded_Project/Debug/Exe/Team16 final project.out	12eac8ca872d66e3

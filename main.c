@@ -43,11 +43,18 @@ Set_Bit(GPIO_PORTB_IM_R,0);//interrupt masking for port b pin 0
 DIO_Init_Pin(PORTB, 1, IN_DIR); //pedestrian 2
 Set_Bit(GPIO_PORTB_IEV_R,1);//assigning interrupt event for port b pin 1
 Set_Bit(GPIO_PORTB_IM_R,1);//interrupt masking for port b pin 1
-//red light pedestrians
+//pedestrians lights 1
 DIO_Init_Pin(PORTD,2,OUT_DIR);
 DIO_Init_Pin(PORTD,3,OUT_DIR);
-DIO_WritePin(PORTD,2,1);//initializing closed pedestrian cross
+//pedestrians lights 2
+DIO_Init_Pin(PORTB,5,OUT_DIR);
+DIO_Init_Pin(PORTB,4,OUT_DIR);
+//initializing closed pedestrian cross1
+DIO_WritePin(PORTD,2,1);
 DIO_WritePin(PORTD,3,0);
+//initializing closed pedestrian cross1
+DIO_WritePin(PORTB,5,1);
+DIO_WritePin(PORTB,4,1);
 //initial traffic lights before FSM starts
 DIO_WritePin(PORTC,4,1);
 DIO_WritePin(PORTB,3,1);
