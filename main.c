@@ -183,7 +183,6 @@ void Pedestrian_Button_Handler(void)
         firedbefore = YES;
         // start timer
         Timer_Set(TIMER1, 2000);
-        Timer_Set(TIMER2,1000);
     }
     // clear interrupt flags
     Set_Bit(GPIO_PORTB_ICR_R, 0);
@@ -254,6 +253,7 @@ void Pedestrian_Timer_IntHandler(void)
     //
     // enabling interrupts for pedestrians again
     firedbefore = NO;
+    Timer_Set(TIMER2,1000);
 }
 
 void Initializing_State(void)
