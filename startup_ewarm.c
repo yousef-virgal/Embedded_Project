@@ -43,6 +43,7 @@ void ResetISR(void);
 static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
+
 void Pedestrian_Timer_IntHandler(void);
 void Traffic_Timer_IntHandler(void);
 void Pedestrian_Button_Handler(void);

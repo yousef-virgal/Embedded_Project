@@ -1,6 +1,10 @@
 #include "DIO.h"
 #include "stdint.h"
 void DIO_WritePort(int8 port, int8 data)
+// Input: port : {PortA,PortB,...,PortF}
+// Input  data : {0,1}
+// Returns void 
+// takes the port number and the data and writes ethier 0 or 1 in the entire ports data register 
 {
     switch (port)
     {
@@ -71,6 +75,11 @@ void DIO_WritePort(int8 port, int8 data)
     }
 }
 void DIO_Init_Pin(int8 port, int8 pin, int8 dir)
+// Input: port : {PortA,PortB,...,PortF}
+// Input: pin : {0,1,2,...}
+// Input: direction: {Out_dir,In_dir} 
+// Returns void 
+// takes the port number and the pin and configures it to be output or input pin
 {
 
     switch (port)
@@ -165,6 +174,9 @@ void DIO_Init_Pin(int8 port, int8 pin, int8 dir)
     }
 }
 void DIO_Init_Port(int8 port)
+// Input: port : {PortA,PortB,...,PortF}
+// Returns void 
+// takes the port number and initializes the clock on this port
 {
     switch (port)
     {
@@ -215,6 +227,11 @@ void DIO_Init_Port(int8 port)
     }
 }
 void DIO_WritePin(int8 port, int8 pin, int8 data) //preconditions : the port is initialized
+// Input: port : {PortA,PortB,...,PortF}
+// Input: pin : {0,1,2,...}
+// Input: data: {0,1}
+// Returns void 
+//  takes the port number and specific pin and writes ethier 0 or 1 in the specified pin
 {
     switch (port)
     {
@@ -284,6 +301,10 @@ void DIO_WritePin(int8 port, int8 pin, int8 data) //preconditions : the port is 
 }
 
 int8 DIO_ReadPin(int8 port, int8 pin)
+// Input: port : {PortA,PortB,...,PortF}
+// Input: pin : {0,1,2,...}
+// Returns value of the pin {0,1} 
+//  takes the port number and specific pin and reads the pin returning its value
 {
     int8 Pindata;
     switch (port)
@@ -312,6 +333,9 @@ int8 DIO_ReadPin(int8 port, int8 pin)
     return Pindata;
 }
 int8 DIO_ReadPort(int8 port)
+// Input: port : {PortA,PortB,...,PortF}
+// Returns value of the ports data register  
+// takes the port number reads it's data register returning it's value
 {
     int8 PortData;
     switch (port)
@@ -340,6 +364,9 @@ int8 DIO_ReadPort(int8 port)
     return PortData;
 }
 void delay(int time)
+// Input: time: Intger
+// Returns Void  
+// function for artificial delay through busy waiting (not used)
 {
     for (int i = 0; i < time; i++)
     {
@@ -347,7 +374,10 @@ void delay(int time)
 }
 
 void DIO_TogglePin(int8 Port, int8 Pin){
-
+// Input: port : {PortA,PortB,...,PortF}
+// Input: pin : {0,1,2,...}
+// Returns void  
+// takes the port number and a pin and toggles the value of that pin 
   switch (Port)
     {
     case PORTA:

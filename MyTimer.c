@@ -1,8 +1,12 @@
 # include "MyTimer.h"
 #include <stdint.h>
-//todo 
-//add priorities
+
+
 void Timer_Init(int8 timernumber,int8 interruptval)
+// Input: timer number : {Timer0,Timer1,...,Timer5}
+// Input: interuptval: {INTERRUPT,NOINTERRUPT}
+// Returns void  
+// configures a certain timer to be 32 bit wide periodc down counting timer, with timeout intrupts enabled or disabled on this timer 
 {
     Set_Bit(SYSCTL_RCGCTIMER_R,timernumber);
     
@@ -93,7 +97,10 @@ void Timer_Init(int8 timernumber,int8 interruptval)
 }
 
 void Timer_Set(int8 timernumber,uint32 time)
-// time is the hexadecimal value 
+// Input: timer number : {Timer0,Timer1,...,Timer5}
+// Input: time unsinged intger 32 bits
+// Returns void  
+// the time in miliseconds is taken as pararmeter and  is used to configure the timers reload value and enable the timer to start counting
 {   
     //setting the time value in ticks to be added in the Interval load register
 
@@ -137,7 +144,11 @@ void Timer_Set(int8 timernumber,uint32 time)
 
 }
 
-void Timer_Stop(int8 timernumber)//it clears the timeout interrupt flag now
+void Timer_Stop(int8 timernumber)
+// Input: timer number : {Timer0,Timer1,...,Timer5}
+// Returns void  
+// stops the timer from counting and clears the timeout interrupt flag
+
 {
     switch(timernumber)
     {
@@ -171,6 +182,10 @@ void Timer_Stop(int8 timernumber)//it clears the timeout interrupt flag now
 
 
 void Timer_Resume(int8 timernumber)
+// Input: timer number : {Timer0,Timer1,...,Timer5}
+// Returns void  
+// sets the enbale bit int the timers control Regesiter for it to start counting again 
+
 {
     switch(timernumber)
     {
