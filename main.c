@@ -44,10 +44,10 @@ int main()
   DIO_Init_Pin(PORTB, 1, IN_DIR); // pedestrian 2 (north south)
   Set_Bit(GPIO_PORTB_IEV_R, 1);   // assigning interrupt event for port b pin 1
   Set_Bit(GPIO_PORTB_IM_R, 1);    // interrupt masking for port b pin 1
-  // pedestrians lights 1 -> along side east west streat
+  // pedestrians lights 1 -> along side North south streat
   DIO_Init_Pin(PORTD, 2, OUT_DIR); // red
   DIO_Init_Pin(PORTD, 3, OUT_DIR); // green
-  // pedestrians lights 2 along side  north south
+  // pedestrians lights 2 along side  east west
   DIO_Init_Pin(PORTB, 5, OUT_DIR); // red
   DIO_Init_Pin(PORTB, 4, OUT_DIR); // green
   // initializing open pedestrian cross1
@@ -91,8 +91,8 @@ void Traffic_Timer_IntHandler(void)
       DIO_WritePin(PORTC, 4, 0); // colse Eastwest red
       DIO_WritePin(PORTC, 5, 1); // open Eastwest green
 
-      DIO_WritePin(PORTB, 5, 1);
-      DIO_WritePin(PORTB, 4, 0);
+      DIO_WritePin(PORTD, 2, 1);
+      DIO_WritePin(PORTD, 3, 0);
       Timer_Set(TIMER0, 5000); // setting green interval for 5 seconds
     }
     else
@@ -101,8 +101,8 @@ void Traffic_Timer_IntHandler(void)
       DIO_WritePin(PORTB, 3, 0); // colse Northsouth red
       DIO_WritePin(PORTB, 6, 1); // open Northsouth green
 
-      DIO_WritePin(PORTD, 2, 1);
-      DIO_WritePin(PORTD, 3, 0);
+      DIO_WritePin(PORTB, 5, 1);
+      DIO_WritePin(PORTB, 4, 0);
 
       Timer_Set(TIMER0, 5000); // setting green interval for 5 seconds
     }
@@ -133,8 +133,9 @@ void Traffic_Timer_IntHandler(void)
       DIO_WritePin(PORTB, 3, 1); // open Northsouth red
       DIO_WritePin(PORTB, 7, 0); // close Northsouth yellow
 
-      DIO_WritePin(PORTD, 2, 0);
-      DIO_WritePin(PORTD, 3, 1);
+      DIO_WritePin(PORTB, 5, 0);
+      DIO_WritePin(PORTB, 4, 1);
+
       Timer_Set(TIMER0, 1000); // setting red interval for 1 second
     }
     else
@@ -143,8 +144,8 @@ void Traffic_Timer_IntHandler(void)
       DIO_WritePin(PORTC, 4, 1); // open Eastwest red
       DIO_WritePin(PORTC, 6, 0); // close Eastwest yellow
 
-      DIO_WritePin(PORTB, 5, 0);
-      DIO_WritePin(PORTB, 4, 1);
+      DIO_WritePin(PORTD, 2, 0);
+      DIO_WritePin(PORTD, 3, 1);
 
       Timer_Set(TIMER0, 1000); // setting red interval for 1 second
     }
@@ -181,10 +182,26 @@ void Pedestrian_Button_Handler(void)
   DIO_WritePin(PORTB, 6, 0);
   DIO_WritePin(PORTB, 7, 0);
 
-  DIO_WritePin(PORTD, 2, 0);
-  DIO_WritePin(PORTD, 3, 1);
-  DIO_WritePin(PORTB, 5, 0);
-  DIO_WritePin(PORTB, 4, 1);
+  if (button1 == 0 && button2 == 0)
+  {
+
+    DIO_WritePin(PORTD, 2, 0);
+    DIO_WritePin(PORTD, 3, 1);
+
+    DIO_WritePin(PORTB, 5, 0);
+    DIO_WritePin(PORTB, 4, 1);
+  }
+  else if (button1 == 0) //east west 
+  {
+    DIO_WritePin(PORTB, 5, 0);
+    DIO_WritePin(PORTB, 4, 1);
+  }
+  else //north south
+  {
+    DIO_WritePin(PORTD, 2, 0);
+    DIO_WritePin(PORTD, 3, 1);
+  }
+
   // start timer
   Timer_Set(TIMER1, 2000);
 
@@ -210,7 +227,7 @@ void Pedestrian_Timer_IntHandler(void)
       // close pedesttrian lights
       DIO_WritePin(PORTB, 5, 1);
       DIO_WritePin(PORTB, 4, 0);
-      Timer_Resume(TIMER0);      // Resume the timer from previous reload value
+      Timer_Resume(TIMER0); // Resume the timer from previous reload value
     }
     else
     {
@@ -220,7 +237,7 @@ void Pedestrian_Timer_IntHandler(void)
 
       DIO_WritePin(PORTD, 2, 1);
       DIO_WritePin(PORTD, 3, 0);
-      Timer_Resume(TIMER0);      // Resume the timer from previous reload value
+      Timer_Resume(TIMER0); // Resume the timer from previous reload value
     }
     break;
   case yellow:
@@ -231,7 +248,7 @@ void Pedestrian_Timer_IntHandler(void)
 
       DIO_WritePin(PORTB, 5, 1);
       DIO_WritePin(PORTB, 4, 0);
-      Timer_Resume(TIMER0);      // Resume the timer from previous reload value
+      Timer_Resume(TIMER0); // Resume the timer from previous reload value
     }
     else
     {
@@ -241,7 +258,7 @@ void Pedestrian_Timer_IntHandler(void)
 
       DIO_WritePin(PORTD, 2, 1);
       DIO_WritePin(PORTD, 3, 0);
-      Timer_Resume(TIMER0);      // Resume the timer from previous reload value
+      Timer_Resume(TIMER0); // Resume the timer from previous reload value
     }
     break;
 
