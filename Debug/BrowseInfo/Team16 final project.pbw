@@ -97267,27 +97267,13 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Pedestrian_Timer_IntHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Pedestrian_Timer_IntHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "57",
-      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
-    },
-    "name": "Pedestrian_Timer_IntHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@Traffic_Timer_IntHandler",
     "What": "Function",
     "defdec": "Def",
     "display": "void Traffic_Timer_IntHandler(void)",
     "location": {
       "column": "6",
-      "line": "61",
+      "line": "56",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "Traffic_Timer_IntHandler",
@@ -97301,10 +97287,24 @@
     "display": "void Pedestrian_Button_Handler(void)",
     "location": {
       "column": "6",
-      "line": "133",
+      "line": "128",
       "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
     },
     "name": "Pedestrian_Button_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Pedestrian_Timer_IntHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Pedestrian_Timer_IntHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "148",
+      "path": "D:\\UNI\\senior1\\CSE211 Introduction to embedded systems\\Group project team 16\\Embedded_Project\\main.c"
+    },
+    "name": "Pedestrian_Timer_IntHandler",
     "origin": "project_file",
     "scope": null
   },

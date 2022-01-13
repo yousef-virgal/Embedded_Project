@@ -17,68 +17,41 @@ static enum traffic stateoftraffic = red;
 static enum  trafficstate direction  = northsouth;
 int main()
 {
-//DIO_Init(PORTF, 1, OUT_DIR); //Red
-//DIO_Init(PORTF, 2, OUT_DIR); //Green
-//DIO_Init(PORTB, 3, OUT_DIR); //Yellow
-//DIO_WritePin(PORTF,1,1);
-//DIO_WritePin(PORTF,2,1);
-//DIO_WritePin(PORTF,3,1);
-  //enable interrupts
+
   __asm(" CPSIE I");
 //East-West Traffic
 DIO_Init(PORTC, 4, OUT_DIR); //Red
 DIO_Init(PORTC, 5, OUT_DIR); //Green
 DIO_Init(PORTC, 6, OUT_DIR); //Yellow
 //North-South Traffic
-DIO_Init(PORTD, 1, OUT_DIR); //Red
-DIO_Init(PORTD, 2, OUT_DIR); //Green
-DIO_Init(PORTD, 3, OUT_DIR); //Yellow
+DIO_Init(PORTF, 1, OUT_DIR); //Red
+DIO_Init(PORTF, 3, OUT_DIR); //Green
+DIO_Init(PORTF, 2, OUT_DIR); //Yellow
 //enabling port b interrupts
   Set_Bit(NVIC_EN0_R,1);
-  Set_Bit(NVIC_EN0_R,2);
 //User Push buttons
-DIO_Init(PORTC, 7, IN_DIR); //pedestrian 1
-Set_Bit(GPIO_PORTC_IEV_R,7);
-Set_Bit(GPIO_PORTC_IM_R,7);
-//Clear_Bit(GPIO_PORTC_PUR_R, 7);
-//Set_Bit(GPIO_PORTC_PDR_R, 7);
-
-
-
+DIO_Init(PORTB, 0, IN_DIR); //pedestrian 1
+Set_Bit(GPIO_PORTB_IEV_R,0);//assigning interrupt event for port b pin 0
+Set_Bit(GPIO_PORTB_IM_R,0);//interrupt masking for port b pin 0
 DIO_Init(PORTB, 1, IN_DIR); //pedestrian 2
-// setting interrupt mask on both pins
-Set_Bit(GPIO_PORTB_IEV_R,0);
-Set_Bit(GPIO_PORTB_IEV_R,1);
-
-Set_Bit(GPIO_PORTB_IM_R,0);
-Set_Bit(GPIO_PORTB_IM_R,1);
-
+Set_Bit(GPIO_PORTB_IEV_R,1);//assigning interrupt event for port b pin 0
+Set_Bit(GPIO_PORTB_IM_R,1);//interrupt masking for port b pin 1
+DIO_Init(PORTE,4,OUT_DIR);
+DIO_WritePin(PORTE,4,1);
 //clearing default pull up resistors
-Clear_Bit(GPIO_PORTB_PUR_R, 0);
-Clear_Bit(GPIO_PORTB_PUR_R, 1);
+
 //defining pull down resistors
-Set_Bit(GPIO_PORTB_PDR_R, 0);
-Set_Bit(GPIO_PORTB_PDR_R, 1);
+
   Timer_Init(TIMER0, INTERRUPT);
   Timer_Set(TIMER0, 1000);
   while (1)
   {
     __asm(" wfi \n");
-    if(DIO_ReadPin(PORTC,7)==1)
-    {
-      int x=1;
-      for(x=1;x<10;x++)
-      {
-        x++;
-      }
-      
-    }
+
   }
 }
 
-void Pedestrian_Timer_IntHandler(void)
-{
-}
+
 
 void Traffic_Timer_IntHandler(void)
 {
@@ -156,9 +129,69 @@ void Pedestrian_Button_Handler(void)
 {
   Timer_Stop(TIMER0);
   Timer_Init(TIMER1,INTERRUPT);
-  Timer_Set(TIMER1,2000);
   // timers traffic
   // change leds
+  DIO_WritePin(PORTC,4,1);
+  DIO_WritePin(PORTC,5,0);
+  DIO_WritePin(PORTC,6,0);
+  DIO_WritePin(PORTF,1,1);
+  DIO_WritePin(PORTF,3,1);
+  DIO_WritePin(PORTF,2,1);
   // start timer
-  Set_Bit(GPIO_PORTC_ICR_R,7)
+  Timer_Set(TIMER1,2000);
+  DIO_WritePin(PORTE,4,0);
+  //clear interrupt flags
+  Set_Bit(GPIO_PORTB_ICR_R,0);
+  Set_Bit(GPIO_PORTB_ICR_R,1);
+ 
 }
+void Pedestrian_Timer_IntHandler(void)
+{
+  DIO_WritePin(PORTE,4,0);
+  Timer_Stop(TIMER1);
+  switch (stateoftraffic)
+  {
+  case red:
+    //both leds are already red from previous state
+    Timer_Resume(TIMER0);
+    break;
+  case green:
+    if (direction == northsouth)
+    {
+      DIO_WritePin(PORTC,4,0);//close northsouth red
+      DIO_WritePin(PORTC, 5, 1); //open Northsouth green
+      Timer_Resume(TIMER0);      //Resume the timer from previous reload value
+    }
+    else
+    {
+
+      DIO_WritePin(PORTF,1,0);//close eastwest green
+      DIO_WritePin(PORTF, 3, 1); //open eastwest green
+      Timer_Resume(TIMER0);      //Resume the timer from previous reload value
+    }
+    stateoftraffic=yellow;
+    break;
+    case yellow:
+    if (direction == northsouth)
+    {
+      DIO_WritePin(PORTC,4,0);//close northsouth green
+      DIO_WritePin(PORTC, 6, 1); //open Northsouth yellow
+      Timer_Resume(TIMER0);      //Resume the timer from previous reload value
+    }
+    else
+    {
+
+      DIO_WritePin(PORTF,1,0);//close eastwest red
+      DIO_WritePin(PORTF, 2, 1); //open eastwest yellow
+      Timer_Resume(TIMER0);      //Resume the timer from previous reload value
+    }
+    stateoftraffic=red;
+    break;
+
+
+  default:
+    break;
+  }
+
+}
+
